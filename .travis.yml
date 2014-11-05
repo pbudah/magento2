@@ -37,7 +37,7 @@ before_script:
   - cd ..
 script:
   # Unit tests
-  - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then hhvm /vendor/bin/phpunit -c dev/tests/unit/phpunit.xml.dist; fi"
+  - sh -c "if [ '$TEST_SUITE' = 'unit' ]; then hhvm vendor/bin/phpunit -c dev/tests/unit/phpunit.xml.dist; fi"
   # Integration tests
   - sh -c "if [ '$TEST_SUITE' = 'integration' ]; then cd dev/tests/integration/; ./../../../vendor/bin/phpunit -c phpunit.xml.dist; fi"
   # Integration integrity tests
