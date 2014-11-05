@@ -3,10 +3,10 @@ php:
   - hhvm
 env:
   - TEST_SUITE=unit
-  - TEST_SUITE=integration
-  - TEST_SUITE=integration_integrity
-  - TEST_SUITE=static_phpcs
-  - TEST_SUITE=static_annotation
+  #- TEST_SUITE=integration
+  #- TEST_SUITE=integration_integrity
+  #- TEST_SUITE=static_phpcs
+  #- TEST_SUITE=static_annotation
 matrix:
   exclude:
     - php: 5.5
