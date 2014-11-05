@@ -18,6 +18,7 @@ before_install:
   - sudo apt-get install -y -qq postfix
 before_script:
   # mock mail
+  - phpenv versions
   - sudo service postfix stop
   - smtp-sink -d "%d.%H.%M.%S" localhost:2500 1000 &
   - echo -e '#!/usr/bin/env bash\nexit 0' | sudo tee /usr/sbin/sendmail
